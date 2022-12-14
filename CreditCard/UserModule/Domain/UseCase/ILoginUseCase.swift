@@ -6,7 +6,6 @@
 
 import Foundation
 import PromiseKit
-import FirebaseAuth
 
 typealias UserResponse = Promise<Bool>
 
