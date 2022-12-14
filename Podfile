@@ -6,7 +6,6 @@ target 'CreditCard' do
   use_frameworks!
 
    pod "PromiseKit", "~> 6.8"
-    pod 'FirebaseAuth'
 
   target 'CreditCardTests' do
     inherit! :search_paths
