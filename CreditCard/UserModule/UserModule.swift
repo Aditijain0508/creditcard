@@ -22,7 +22,7 @@ public class UserModule {
         return viewController
     }
     
-    private func createLoginViewModel() -> ILoginViewModel {
+    private func createLoginViewModel() -> LoginViewModelImpl {
         let viewModel = LoginViewModelImpl(useCase: createLoginUseCase())
         return viewModel
     }
@@ -38,7 +38,7 @@ public class UserModule {
     }
 
     private func createLoginService() -> ILoginService {
-        let service = LoginServiceImpl()
+        let service = LoginServiceImpl(dataHelper: WebserviceHelper.shared)
         return service
     }
 

@@ -44,15 +44,15 @@ struct cardsView: View {
     }
 }
 
-struct CardListView: View {
-    
-    @ObservedObject var listViewModel: CardListViewModelImpl
-    
+struct CardListView<Model>: View where Model: CardListViewModel {
+   
+    @ObservedObject var listViewModel: Model
+   
     var body: some View {
         VStack {
             List{
-                ForEach(listViewModel.cards, id: \.id) { cards in
-                    ZStack {
+                if let cards = listViewModel.cardss {
+                    ForEach(cards, id: \.id) { cards in
                         cardsView(cards: cards)
                     }
                 }
@@ -65,4 +65,3 @@ struct CardListView: View {
         }
     }
 }
-

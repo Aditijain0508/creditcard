@@ -6,22 +6,25 @@
 
 import SwiftUI
 
-let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
-let bottomPadding:CGFloat = 20
-let imageBottomPadding:CGFloat = 75
-let imageHeighWidth:CGFloat = 150
-let buttonHeight:CGFloat = 60
-let buttonWidth:CGFloat = 300
-let buttonRadius:CGFloat = 15
+enum ViewLayoutConstants:CGFloat {
+    case bottomPadding = 20
+    case imageBottomPadding = 75
+    case imageHeighWidth = 150
+    case buttonHeight = 60
+    case buttonWidth = 300
+    case buttonRadius = 15
+}
 
-struct LoginView : View {
+let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
+
+struct LoginView<Model>: View where Model: ILoginViewModel{
     
-    @State var email: String = ""
-    @State var password: String = ""
-    @State var shouldAnimate = false
-    
+    @State private var email: String = ""
+    @State private var password: String = ""
+//
     let cornerRadius:CGFloat = 5.0
-    var viewModel: ILoginViewModel?
+    
+    @ObservedObject var viewModel: Model
     
     var body: some View {
         
@@ -32,22 +35,23 @@ struct LoginView : View {
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(cornerRadius)
-                .padding(.bottom, bottomPadding)
+                .padding(.bottom, ViewLayoutConstants.bottomPadding.rawValue)
             SecureField(LoginViewConstants.enterPassword, text: $password)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(cornerRadius)
-                .padding(.bottom, bottomPadding)
-            ActivityIndicator(shouldAnimate: self.$shouldAnimate)
+                .padding(.bottom, ViewLayoutConstants.bottomPadding.rawValue)
+            
+            ActivityIndicator(shouldAnimate: self.$viewModel.isLoading)
             Button(action: {
-                self.shouldAnimate = !self.shouldAnimate
-                viewModel?.login(email: email, password: password)
+               // self.shouldAnimate = !self.shouldAnimate
+                viewModel.login(email: email, password: password)
             }) {
                 ButtonContent(text: LoginViewConstants.login)
             }.padding()
         }
         .onAppear(){
-            self.shouldAnimate = false
+          //  self.shouldAnimate = false
             self.email = ""
             self.password = ""
         }
@@ -55,21 +59,21 @@ struct LoginView : View {
     }
 }
 
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        LoginView()
-            .previewInterfaceOrientation(.portrait)
-    }
-}
-#endif
+//#if DEBUG
+//struct ContentView_Previews : PreviewProvider {
+//    static var previews: some View {
+//        LoginView()
+//            .previewInterfaceOrientation(.portrait)
+//    }
+//}
+//#endif
 
 struct WelcomeText : View {
     var body: some View {
         return Text(LoginViewConstants.welcomeMsg)
             .font(.largeTitle)
             .fontWeight(.semibold)
-            .padding(.bottom, bottomPadding)
+            .padding(.bottom, ViewLayoutConstants.bottomPadding.rawValue)
     }
 }
 
@@ -78,9 +82,9 @@ struct UserImage : View {
         return Image("bank_icon")
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: imageHeighWidth, height: imageHeighWidth)
+            .frame(width: ViewLayoutConstants.imageHeighWidth.rawValue, height: ViewLayoutConstants.imageHeighWidth.rawValue)
             .clipped()
-            .padding(.bottom, imageBottomPadding)
+            .padding(.bottom, ViewLayoutConstants.imageBottomPadding.rawValue)
     }
 }
 
@@ -91,9 +95,9 @@ struct ButtonContent : View {
             .font(.headline)
             .foregroundColor(.white)
             .padding()
-            .frame(width: buttonWidth, height: buttonHeight)
+            .frame(width: ViewLayoutConstants.buttonWidth.rawValue, height: ViewLayoutConstants.buttonHeight.rawValue)
             .background(Color.cyan)
-            .cornerRadius(buttonRadius)
+            .cornerRadius(ViewLayoutConstants.buttonRadius.rawValue)
     }
 }
 

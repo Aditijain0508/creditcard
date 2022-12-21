@@ -30,7 +30,7 @@ class CardListRepositoryImplTests: XCTestCase {
         cardListRepositoryImpl.makeServiceCallToGetProducts { result in
             switch result {
             case .success(let cardList):
-                XCTAssertTrue(cardList.cards.count > 0)
+                XCTAssertTrue(cardList.cards?.count ?? 0 > 0)
             case .failure(_):
                 XCTFail("makeServiceCallToGetProducts should not fail")
             }

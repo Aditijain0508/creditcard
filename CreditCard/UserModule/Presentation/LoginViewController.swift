@@ -7,10 +7,10 @@ import UIKit
 import SwiftUI
 
 class LoginViewController: UIViewController {
-    var viewModel: ILoginViewModel?
+    var viewModel: LoginViewModelImpl?
 
     override func loadView() {
-        let loginViewController = UIHostingController(rootView: LoginView(viewModel: viewModel))
+        let loginViewController = UIHostingController(rootView: LoginView(viewModel: viewModel!))
         view = UIView()
         self.addChild(loginViewController)
         view.addSubview(loginViewController.view)

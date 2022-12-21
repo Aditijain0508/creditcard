@@ -8,11 +8,11 @@ import Foundation
 import SwiftUI
 import Combine
 
-class CardListViewModelImpl: ObservableObject {
+class CardListViewModelImpl: CardListViewModel {
+    @Published var cardss: [Cards]?
     
     var outputDelegate: CardListViewModelOutput?
     
-    @Published var cards: [Cards] = []
     
     private let useCase: CardListUseCase
     
@@ -29,7 +29,7 @@ class CardListViewModelImpl: ObservableObject {
     
     private func getData(model: CardsList) {
         if let data = model.cards{
-            cards = data
+            cardss = data
         }
         outputDelegate?.success()
     }

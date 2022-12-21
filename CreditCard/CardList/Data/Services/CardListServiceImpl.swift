@@ -5,18 +5,20 @@
 //  Created by Aditi jain on 12/12/22.
 //
 import Foundation
-import Network
 
 class CardListServiceImpl: CardListService {
     
     
-    init() {
+    let dataHelper:DataHelper
+    
+    init(dataHelper: DataHelper){
+        self.dataHelper = dataHelper
     }
     
     func makeNetworkRequest(completion: @escaping (Result<CardsList, Error>) -> Void) {
         
         let contactRequestModel = APIRequestModel(api: CardsListAPI.getCardsData)
-        WebserviceHelper.requestAPI(apiModel: contactRequestModel) { response in
+        dataHelper.requestAPI(apiModel: contactRequestModel) { response in
             switch response {
             case .success(let serverData):
                 do{

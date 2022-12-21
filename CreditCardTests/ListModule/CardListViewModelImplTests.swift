@@ -35,7 +35,7 @@ class CardListViewModelImplTests: XCTestCase {
     func testFetchProducts_Successs() throws {
         cardListUseCase.mockGetProducts = Result.success(MockCardList().cardList())
         cardListViewModel.fetchProducts()
-        XCTAssertTrue(cardListViewModel.cards.count > 0)
+        XCTAssertTrue(cardListViewModel.cardss!.count > 0)
     }
 
     func testFetchProducts_Failure() throws {
@@ -64,13 +64,13 @@ class MockCardListUseCase: CardListUseCase {
 
 class MockCardList {
     func cardList() -> CardsList {
-        let card1 = Cards(id: "1", title: "Title", description: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
-        let card2 = Cards(id: "1", title: "Title", description: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
-        let card3 = Cards(id: "1", title: "Title", description: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
-        let card4 = Cards(id: "1", title: "Title", description: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
-        let card5 = Cards(id: "1", title: "Title", description: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
-        let card6 = Cards(id: "1", title: "Title", description: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
-        let card7 = Cards(id: "1", title: "Title", description: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
-        return CardsList(limit: 10, total: 7, cards: [card1, card2, card3, card4, card5, card6, card7])
+        let card1 = Cards(id: "1", title: "Title", cardsdescription: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+        let card2 = Cards(id: "1", title: "Title", cardsdescription: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+        let card3 = Cards(id: "1", title: "Title", cardsdescription: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+        let card4 = Cards(id: "1", title: "Title", cardsdescription: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+        let card5 = Cards(id: "1", title: "Title", cardsdescription: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+        let card6 = Cards(id: "1", title: "Title", cardsdescription: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+        let card7 = Cards(id: "1", title: "Title", cardsdescription: "Description", thumbnail: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+        return CardsList(cards: [card1, card2, card3, card4, card5, card6, card7])
     }
 }

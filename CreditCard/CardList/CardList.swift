@@ -6,7 +6,6 @@
 //
 import Foundation
 import UIKit
-import Network
 import SwiftUI
 
 public class CardList {
@@ -35,7 +34,7 @@ public class CardList {
     }
     
     private func createCardListService() -> CardListService {
-        let service = CardListServiceImpl()
+        let service = CardListServiceImpl(dataHelper: WebserviceHelper.shared)
         return service
     }
     

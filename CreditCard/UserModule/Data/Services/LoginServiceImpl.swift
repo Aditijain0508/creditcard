@@ -8,11 +8,17 @@ import PromiseKit
 
 class LoginServiceImpl: ILoginService {
     
+    let dataHelper:DataHelper
+    
+    init(dataHelper: DataHelper){
+        self.dataHelper = dataHelper
+    }
+    
     func makeNetworkRequest(email: String, password: String) -> UserResponse {
         
         return Promise<Bool> { seal in
-            let contactRequestModel = APIRequestModel(api: CardsListAPI.getCardsData)
-            WebserviceHelper.requestAPI(apiModel: contactRequestModel) { response in
+            let contactRequestModel = APIRequestModel(api: LoginAPI.login)
+            dataHelper.requestAPI(apiModel: contactRequestModel) { response in
                 switch response {
                 case .success(_):
                     seal.fulfill(true)
