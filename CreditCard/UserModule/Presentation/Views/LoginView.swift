@@ -36,10 +36,12 @@ struct LoginView<Model>: View where Model: ILoginViewModel{
                 .background(lightGreyColor)
                 .cornerRadius(cornerRadius)
                 .padding(.bottom, ViewLayoutConstants.bottomPadding.rawValue)
+                .foregroundColor(Color.black)
             SecureField(LoginViewConstants.enterPassword, text: $password)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(cornerRadius)
+                .foregroundColor(Color.black)
                 .padding(.bottom, ViewLayoutConstants.bottomPadding.rawValue)
             
             ActivityIndicator(shouldAnimate: self.$viewModel.isLoading)
@@ -71,6 +73,7 @@ struct LoginView<Model>: View where Model: ILoginViewModel{
 struct WelcomeText : View {
     var body: some View {
         return Text(LoginViewConstants.welcomeMsg)
+            .foregroundColor(.blue)
             .font(.largeTitle)
             .fontWeight(.semibold)
             .padding(.bottom, ViewLayoutConstants.bottomPadding.rawValue)

@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
         view = UIView()
         self.addChild(loginViewController)
         view.addSubview(loginViewController.view)
+        loginViewController.view.backgroundColor = UIColor.white
         loginViewController.view.frame = view.bounds
         loginViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         loginViewController.didMove(toParent: self)

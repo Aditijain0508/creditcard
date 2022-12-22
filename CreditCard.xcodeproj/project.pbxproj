@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		471F6F4329483D5F008E6C6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F4229483D5F008E6C6E /* AppDelegate.swift */; };
 		471F6F4529483D5F008E6C6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F4429483D5F008E6C6E /* SceneDelegate.swift */; };
-		471F6F4729483D5F008E6C6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F4629483D5F008E6C6E /* ViewController.swift */; };
 		471F6F4F29483D62008E6C6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471F6F4D29483D62008E6C6E /* LaunchScreen.storyboard */; };
 		471F6F5A29483D63008E6C6E /* CreditCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F5929483D63008E6C6E /* CreditCardTests.swift */; };
 		471F6F6429483D63008E6C6E /* CreditCardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F6329483D63008E6C6E /* CreditCardUITests.swift */; };
@@ -25,7 +24,6 @@
 		471F6F9429483F96008E6C6E /* CardListUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F8229483F96008E6C6E /* CardListUseCaseImpl.swift */; };
 		471F6F9529483F96008E6C6E /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F8529483F96008E6C6E /* CardListViewModel.swift */; };
 		471F6F9629483F96008E6C6E /* CardListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F8629483F96008E6C6E /* CardListViewModelImpl.swift */; };
-		471F6F9829483F96008E6C6E /* Card.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471F6F8929483F96008E6C6E /* Card.storyboard */; };
 		471F6F9929483F96008E6C6E /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F8B29483F96008E6C6E /* CardListView.swift */; };
 		47227B162949A37000D3C6CE /* UserModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47227AFA2949A37000D3C6CE /* UserModule.swift */; };
 		47227B172949A37000D3C6CE /* ILoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47227AFD2949A37000D3C6CE /* ILoginRepository.swift */; };
@@ -88,7 +86,6 @@
 		471F6F3F29483D5F008E6C6E /* CreditCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		471F6F4229483D5F008E6C6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		471F6F4429483D5F008E6C6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		471F6F4629483D5F008E6C6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		471F6F4E29483D62008E6C6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		471F6F5029483D62008E6C6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		471F6F5529483D63008E6C6E /* CreditCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreditCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +104,6 @@
 		471F6F8229483F96008E6C6E /* CardListUseCaseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListUseCaseImpl.swift; sourceTree = "<group>"; };
 		471F6F8529483F96008E6C6E /* CardListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
 		471F6F8629483F96008E6C6E /* CardListViewModelImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewModelImpl.swift; sourceTree = "<group>"; };
-		471F6F8929483F96008E6C6E /* Card.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Card.storyboard; sourceTree = "<group>"; };
 		471F6F8B29483F96008E6C6E /* CardListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		47227AFA2949A37000D3C6CE /* UserModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModule.swift; sourceTree = "<group>"; };
 		47227AFD2949A37000D3C6CE /* ILoginRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILoginRepository.swift; sourceTree = "<group>"; };
@@ -239,7 +235,6 @@
 				471F6F7229483F96008E6C6E /* CardList */,
 				471F6F4229483D5F008E6C6E /* AppDelegate.swift */,
 				471F6F4429483D5F008E6C6E /* SceneDelegate.swift */,
-				471F6F4629483D5F008E6C6E /* ViewController.swift */,
 				471F6F4D29483D62008E6C6E /* LaunchScreen.storyboard */,
 				471F6F5029483D62008E6C6E /* Info.plist */,
 			);
@@ -343,7 +338,6 @@
 		471F6F8329483F96008E6C6E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				471F6F8829483F96008E6C6E /* Storyboard */,
 				471F6F8A29483F96008E6C6E /* Views */,
 			);
 			path = Presentation;
@@ -356,14 +350,6 @@
 				471F6F8629483F96008E6C6E /* CardListViewModelImpl.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		471F6F8829483F96008E6C6E /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				471F6F8929483F96008E6C6E /* Card.storyboard */,
-			);
-			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		471F6F8A29483F96008E6C6E /* Views */ = {
@@ -627,7 +613,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				471F6F9829483F96008E6C6E /* Card.storyboard in Resources */,
 				47227B272949A37000D3C6CE /* Main.storyboard in Resources */,
 				47227B252949A37000D3C6CE /* Assets.xcassets in Resources */,
 				471F6F4F29483D62008E6C6E /* LaunchScreen.storyboard in Resources */,
@@ -772,7 +757,6 @@
 				471F6F9429483F96008E6C6E /* CardListUseCaseImpl.swift in Sources */,
 				47D4D9B929531F0800766155 /* NetworkRequest.swift in Sources */,
 				471F6F8D29483F96008E6C6E /* CardListRepositoryImpl.swift in Sources */,
-				471F6F4729483D5F008E6C6E /* ViewController.swift in Sources */,
 				471F6F4329483D5F008E6C6E /* AppDelegate.swift in Sources */,
 				4769F18D2949A6140067E469 /* Alertable.swift in Sources */,
 				471F6F4529483D5F008E6C6E /* SceneDelegate.swift in Sources */,
