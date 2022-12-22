@@ -13,11 +13,9 @@ class CardListUseCaseImplTests: XCTestCase {
     
     var cardListUseCaseImpl: CardListUseCaseImpl!
     var cardListRepository: MockCardListRepository!
-    var cardListViewModelOutput: MockCardListViewModelOutput!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        cardListViewModelOutput = MockCardListViewModelOutput()
         cardListRepository = MockCardListRepository()
         cardListUseCaseImpl = CardListUseCaseImpl(repository: cardListRepository)
     }

@@ -9,6 +9,5 @@ import SwiftUI
 
 protocol CardListViewModel: ObservableObject {
     var cardss: [Cards]? { get }
-    var outputDelegate: CardListViewModelOutput? { get set }
     func fetchProducts()
 }

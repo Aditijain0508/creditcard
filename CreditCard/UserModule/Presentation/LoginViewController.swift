@@ -7,7 +7,12 @@ import UIKit
 import SwiftUI
 
 class LoginViewController: UIViewController {
+
     var viewModel: LoginViewModelImpl?
+    var networkManager: INetworkManager = {
+        let networkManager = NetworkManager()
+        return networkManager
+    }()
 
     override func loadView() {
         let loginViewController = UIHostingController(rootView: LoginView(viewModel: viewModel!))
@@ -29,9 +34,10 @@ class LoginViewController: UIViewController {
 extension LoginViewController: Alertable, LoginViewModelOutput {
     
     func success() {
-        let swiftUIViewController = CardList().createCardListViewController()
-        self.navigationController?.pushViewController(swiftUIViewController, animated: true)
-        
+        DispatchQueue.main.async {
+            let swiftUIViewController = CardList(networkManager: self.networkManager).createCardListViewController()
+            self.navigationController?.pushViewController(swiftUIViewController, animated: true)
+        }
     }
     
     func gotError(_ error: String) {

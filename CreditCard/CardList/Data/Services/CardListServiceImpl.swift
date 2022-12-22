@@ -9,50 +9,16 @@ import Foundation
 class CardListServiceImpl: CardListService {
     
     
-    let dataHelper:DataHelper
+    private let networkManager: INetworkManager
     
-    init(dataHelper: DataHelper){
-        self.dataHelper = dataHelper
+    init(networkManager: INetworkManager) {
+        self.networkManager = networkManager
     }
     
     func makeNetworkRequest(completion: @escaping (Result<CardsList, Error>) -> Void) {
-        
-        let contactRequestModel = APIRequestModel(api: CardsListAPI.getCardsData)
-        dataHelper.requestAPI(apiModel: contactRequestModel) { response in
-            switch response {
-            case .success(let serverData):
-                do{
-                    let jsonDecoder = JSONDecoder()
-                    let responseModel = try jsonDecoder.decode(CardsList.self, from: serverData)
-                    completion(.success(responseModel))
-                }
-                catch{
-                }
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
+        let request = NetworkRequest(path: CardListAPIEndpoints.listEndPoint, method: .get, baseUrl: CardListAPIEndpoints.listBaseUrl )
+        self.networkManager.request(request: request, completion: completion)
     }
     
 }
-
-enum CardsListAPI {
-    case getCardsData
-}
-
-extension CardsListAPI: APIProtocol {
-    func httpMthodType() -> HTTPMethodType {
-        return .get
-    }
-    
-    func apiEndPath() -> String {
-        return CardListAPIEndpoints.listEndPoint
-        
-    }
-    
-    func apiBasePath() -> String {
-        return WebserviceConstants.baseURL
-    }
-}
-
 

@@ -10,7 +10,8 @@ struct UserModuleErrorConstants {
 }
 
 struct APIEndPointConstants {
-    static let loginEndoint = "Login"
+    static let loginEndoint = "posts"
+    static let loginBaseUrl = "https://jsonplaceholder.typicode.com/"
 }
 
 struct LoginViewConstants {

@@ -13,7 +13,7 @@ class LoginUseCaseImpl: ILoginUseCase {
         self.repository = repository
     }
     
-    func getLogin(email: String, password: String) -> UserResponse {
-        return repository.makeServiceCallToLoginUser(email: email, password: password)
+    func getLogin(email: String, password: String, completion: @escaping (Result<[AuthUser], Error>) -> Void){
+        return repository.makeServiceCallToLoginUser(email: email, password: password, completion: completion)
     }
 }

@@ -9,8 +9,12 @@ import UIKit
 
 
 public class UserModule {
-    public init() {
+    private let networkManager: INetworkManager
+    
+    init(networkManager: INetworkManager) {
+        self.networkManager = networkManager
     }
+
     
     public func createLoginViewController() -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
@@ -38,7 +42,7 @@ public class UserModule {
     }
 
     private func createLoginService() -> ILoginService {
-        let service = LoginServiceImpl(dataHelper: WebserviceHelper.shared)
+        let service = LoginServiceImpl(networkManager: self.networkManager)
         return service
     }
 

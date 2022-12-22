@@ -13,8 +13,8 @@ class LoginRepositoryImpl: ILoginRepository {
         self.service = service
     }
     
-    func makeServiceCallToLoginUser(email: String, password: String) -> UserResponse {
-        return service.makeNetworkRequest(email: email, password: password)
+    func makeServiceCallToLoginUser(email: String, password: String, completion: @escaping (Result<[AuthUser], Error>) -> Void) {
+        return service.makeNetworkRequest(email: email, password: password, completion: completion)
     }
     
 }

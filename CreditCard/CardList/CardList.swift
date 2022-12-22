@@ -10,7 +10,12 @@ import SwiftUI
 
 public class CardList {
         
-    public init() {}
+    private let networkManager: INetworkManager
+    
+    init(networkManager: INetworkManager) {
+        self.networkManager = networkManager
+    }
+
     
     public func createCardListViewController() -> UIViewController {
         let viewModel = createCardListViewModel()
@@ -34,7 +39,7 @@ public class CardList {
     }
     
     private func createCardListService() -> CardListService {
-        let service = CardListServiceImpl(dataHelper: WebserviceHelper.shared)
+        let service = CardListServiceImpl(networkManager: self.networkManager)
         return service
     }
     

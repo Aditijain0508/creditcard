@@ -15,45 +15,39 @@ class CardListViewModelImplTests: XCTestCase {
 
     var cardListViewModel: CardListViewModelImpl!
     var cardListUseCase: MockCardListUseCase!
-    var cardListViewModelOutput: MockCardListViewModelOutput!
+    private var promise: XCTestExpectation!
+
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        cardListViewModelOutput = MockCardListViewModelOutput()
         cardListUseCase = MockCardListUseCase()
         cardListViewModel = CardListViewModelImpl(useCase: cardListUseCase)
-        cardListViewModel.outputDelegate = cardListViewModelOutput
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         cardListUseCase = nil
         cardListViewModel = nil
-        cardListViewModelOutput = nil
     }
 
     func testFetchProducts_Successs() throws {
+        let expectation = expectation(description: "Success Response")
         cardListUseCase.mockGetProducts = Result.success(MockCardList().cardList())
         cardListViewModel.fetchProducts()
-        XCTAssertTrue(cardListViewModel.cardss!.count > 0)
+        DispatchQueue.main.async {
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 1, handler: nil)
+        XCTAssertTrue(cardListViewModel.cardss?.count ?? 0 > 0)
     }
 
     func testFetchProducts_Failure() throws {
         cardListViewModel.fetchProducts()
-        XCTAssertFalse(cardListViewModelOutput.methods.contains("[gotError(_:)]"))
+        XCTAssertTrue(cardListViewModel.cardss?.count ?? 0 == 0)
     }
     
 }
 
-class MockCardListViewModelOutput: CardListViewModelOutput {
-    var methods = [String]()
-    func success() {
-        methods.append(#function)
-    }
-    func gotError(_ error: String) {
-        methods.append(#function)
-    }
-}
 
 class MockCardListUseCase: CardListUseCase {
     var mockGetProducts: Result<CardsList, Error>?

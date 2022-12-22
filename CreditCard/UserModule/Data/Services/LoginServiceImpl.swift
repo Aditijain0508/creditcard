@@ -4,29 +4,18 @@
 //
 
 import Foundation
-import PromiseKit
 
 class LoginServiceImpl: ILoginService {
     
-    let dataHelper:DataHelper
+    private let networkManager: INetworkManager
     
-    init(dataHelper: DataHelper){
-        self.dataHelper = dataHelper
+    init(networkManager: INetworkManager) {
+        self.networkManager = networkManager
     }
     
-    func makeNetworkRequest(email: String, password: String) -> UserResponse {
-        
-        return Promise<Bool> { seal in
-            let contactRequestModel = APIRequestModel(api: LoginAPI.login)
-            dataHelper.requestAPI(apiModel: contactRequestModel) { response in
-                switch response {
-                case .success(_):
-                    seal.fulfill(true)
-                case .failure(let error):
-                    seal.reject(error)
-                }
-            }
-        }
+    func makeNetworkRequest(email: String, password: String, completion: @escaping (Result<[AuthUser], Error>) -> Void) {
+        let request = NetworkRequest(path: APIEndPointConstants.loginEndoint, method: .get, baseUrl: APIEndPointConstants.loginBaseUrl)
+        self.networkManager.request(request: request, completion: completion)
     }
 }
 
@@ -34,16 +23,3 @@ enum LoginAPI {
     case login
 }
 
-extension LoginAPI: APIProtocol {
-    func httpMthodType() -> HTTPMethodType {
-        return .get
-    }
-    
-    func apiEndPath() -> String {
-        return APIEndPointConstants.loginEndoint
-    }
-    
-    func apiBasePath() -> String {
-        return WebserviceConstants.loginBaseURL
-    }
-}

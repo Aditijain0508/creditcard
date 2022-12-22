@@ -7,61 +7,48 @@
 import XCTest
 @testable import CreditCard
 
+
+
 class UserViewModelTest: XCTestCase {
-    
+
     var userViewModel: LoginViewModelImpl?
-    var useCase = MockUseCase()
-    private var promise: XCTestExpectation!
-    
+    var useCase = MockLoginUseCase()
+
     override func setUp() {
         super.setUp()
         userViewModel = LoginViewModelImpl(useCase: useCase)
-        userViewModel?.outputDelegate = self
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
-    
-    func testViewModel_Success() {
-        promise = expectation(description: "Should get success")
-        userViewModel?.login(email: Constant.email, password: Constant.password)
-        wait(for: [promise], timeout: 10.0)
+
+    @MainActor func testViewModel_Success() {
+        useCase.mockLogin = Result.success(MockUserList().user())
+        userViewModel?.login(email: "abh", password: "abh")
+        XCTAssertTrue(userViewModel?.isSuccessful == true)
     }
-    
-    func testViewModel_Fail() {
-        promise = expectation(description: "Should get fail")
-        useCase.error = NSError(domain: "com.example.error", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed Error"])
-        userViewModel?.login(email: Constant.email, password: Constant.password)
-        wait(for: [promise], timeout: 10.0)
+
+    @MainActor func testViewModel_Fail() {
+        userViewModel?.login(email: "", password: "")
+        XCTAssertTrue(userViewModel?.isSuccessful == false)
     }
-    
+
     func testValidation() {
-        let result = userViewModel?.checkForValidations(email: Constant.email, password: Constant.password) ?? false
+        let result = userViewModel?.checkForValidations(email: "akj", password: "password") ?? false
         XCTAssertTrue(result)
-        let resultFalse = userViewModel?.checkForValidations(email: Constant.email, password: "") ?? true
+        let resultFalse = userViewModel?.checkForValidations(email: "", password: "") ?? true
         XCTAssertFalse(resultFalse)
     }
-    
-    
-}
 
-extension UserViewModelTest: LoginViewModelOutput {
-    
-    func success() {
-        promise.fulfill()
-    }
-    
-    func gotError(_ error: String) {
-        XCTAssertTrue(error == "Failed Error")
-        promise.fulfill()
-        //XCTFail()
-    }
-    
+
 }
 
 
-struct Constant {
-    static let email = "sk@gmail.com"
-    static let password = "123456"
+class MockLoginUseCase: ILoginUseCase {
+    func getLogin(email: String, password: String, completion: @escaping (Result<[AuthUser], Error>) -> Void) {
+        completion(mockLogin ?? .failure(LoginViewModelError.emptyArray))
+    }
+    
+    var mockLogin: Result<[AuthUser], Error>?
 }

@@ -11,8 +11,6 @@ import Combine
 class CardListViewModelImpl: CardListViewModel {
     @Published var cardss: [Cards]?
     
-    var outputDelegate: CardListViewModelOutput?
-    
     
     private let useCase: CardListUseCase
     
@@ -21,17 +19,18 @@ class CardListViewModelImpl: CardListViewModel {
             switch result {
             case .success(let cardsList):
                 self?.getData(model: cardsList)
-            case .failure(let error):
-                self?.outputDelegate?.gotError(error.localizedDescription)
+            case .failure( _):
+                return
             }
         }
     }
     
     private func getData(model: CardsList) {
-        if let data = model.cards{
-            cardss = data
+        DispatchQueue.main.async {  [weak self] in
+            if let data = model.cards{
+                self?.cardss = data
+            }
         }
-        outputDelegate?.success()
     }
     
     init(useCase: CardListUseCase) {

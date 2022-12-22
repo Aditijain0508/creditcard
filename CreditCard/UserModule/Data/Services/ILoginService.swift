@@ -6,5 +6,5 @@
 import Foundation
 
 protocol ILoginService {
-    func makeNetworkRequest(email: String, password: String) -> UserResponse
+    func makeNetworkRequest(email: String, password: String, completion: @escaping (Result<[AuthUser], Error>) -> Void)
 }
