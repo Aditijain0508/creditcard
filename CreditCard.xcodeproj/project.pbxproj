@@ -25,12 +25,8 @@
 		471F6F9429483F96008E6C6E /* CardListUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F8229483F96008E6C6E /* CardListUseCaseImpl.swift */; };
 		471F6F9529483F96008E6C6E /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F8529483F96008E6C6E /* CardListViewModel.swift */; };
 		471F6F9629483F96008E6C6E /* CardListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F8629483F96008E6C6E /* CardListViewModelImpl.swift */; };
-		471F6F9729483F96008E6C6E /* CardListViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F8729483F96008E6C6E /* CardListViewModelOutput.swift */; };
 		471F6F9829483F96008E6C6E /* Card.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471F6F8929483F96008E6C6E /* Card.storyboard */; };
 		471F6F9929483F96008E6C6E /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F6F8B29483F96008E6C6E /* CardListView.swift */; };
-		47227AF529499B2E00D3C6CE /* WebserviceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47227AF229499B2E00D3C6CE /* WebserviceConfig.swift */; };
-		47227AF629499B2E00D3C6CE /* WebserviceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47227AF329499B2E00D3C6CE /* WebserviceConstants.swift */; };
-		47227AF729499B2E00D3C6CE /* WebserviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47227AF429499B2E00D3C6CE /* WebserviceHelper.swift */; };
 		47227B162949A37000D3C6CE /* UserModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47227AFA2949A37000D3C6CE /* UserModule.swift */; };
 		47227B172949A37000D3C6CE /* ILoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47227AFD2949A37000D3C6CE /* ILoginRepository.swift */; };
 		47227B182949A37000D3C6CE /* LoginRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47227AFE2949A37000D3C6CE /* LoginRepositoryImpl.swift */; };
@@ -49,11 +45,22 @@
 		4769F18D2949A6140067E469 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769F18C2949A6140067E469 /* Alertable.swift */; };
 		4769F18F2949A6D20067E469 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769F18E2949A6D20067E469 /* AppContainer.swift */; };
 		4769F1922949EE8E0067E469 /* UserModuleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769F1912949EE8E0067E469 /* UserModuleConstants.swift */; };
+		4770E7642953893C009A2C13 /* LoginRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770E7632953893C009A2C13 /* LoginRepositoryImplTests.swift */; };
+		4770E76629538C19009A2C13 /* LoginUseCaseImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770E76529538C19009A2C13 /* LoginUseCaseImplTest.swift */; };
+		4770E76C29539295009A2C13 /* URLRequestGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770E76829539295009A2C13 /* URLRequestGeneratorTests.swift */; };
+		4770E76D29539295009A2C13 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770E76929539295009A2C13 /* NetworkManagerTests.swift */; };
+		4770E76E29539295009A2C13 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770E76A29539295009A2C13 /* MockURLSession.swift */; };
+		4770E76F29539295009A2C13 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4770E76B29539295009A2C13 /* MockURLSessionDataTask.swift */; };
+		4770E771295393A6009A2C13 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 4770E770295393A6009A2C13 /* User.json */; };
 		47A09205294A0522006AE406 /* UserViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A09201294A0522006AE406 /* UserViewModelTest.swift */; };
-		47A09207294A0556006AE406 /* MockUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A09204294A0522006AE406 /* MockUseCase.swift */; };
 		47A0920E294A070D006AE406 /* CardListViewModelImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A09209294A070D006AE406 /* CardListViewModelImplTests.swift */; };
 		47A0920F294A070D006AE406 /* CardListRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A0920A294A070D006AE406 /* CardListRepositoryImplTests.swift */; };
 		47A09211294A070D006AE406 /* CardListUseCaseImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A0920C294A070D006AE406 /* CardListUseCaseImplTests.swift */; };
+		47D4D9B729531F0800766155 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4D9B329531F0800766155 /* NetworkManager.swift */; };
+		47D4D9B829531F0800766155 /* URLRequestGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4D9B429531F0800766155 /* URLRequestGenerator.swift */; };
+		47D4D9B929531F0800766155 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4D9B529531F0800766155 /* NetworkRequest.swift */; };
+		47D4D9BA29531F0800766155 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4D9B629531F0800766155 /* NetworkError.swift */; };
+		47D4D9BC295321BF00766155 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4D9BB295321BF00766155 /* Configuration.swift */; };
 		4D243825CD29C99EA1025FD0 /* Pods_CreditCardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6EC6E956EE678317BFF61F7 /* Pods_CreditCardTests.framework */; };
 		6297CCFA4C67E8ED633C811B /* Pods_CreditCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E78E5606581D490D8F4CCA /* Pods_CreditCard.framework */; };
 		7DDDEFC6A1D6B138B4EC71FD /* Pods_CreditCard_CreditCardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35FA8CACB5F08F339685FACA /* Pods_CreditCard_CreditCardUITests.framework */; };
@@ -100,12 +107,8 @@
 		471F6F8229483F96008E6C6E /* CardListUseCaseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListUseCaseImpl.swift; sourceTree = "<group>"; };
 		471F6F8529483F96008E6C6E /* CardListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
 		471F6F8629483F96008E6C6E /* CardListViewModelImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewModelImpl.swift; sourceTree = "<group>"; };
-		471F6F8729483F96008E6C6E /* CardListViewModelOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewModelOutput.swift; sourceTree = "<group>"; };
 		471F6F8929483F96008E6C6E /* Card.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Card.storyboard; sourceTree = "<group>"; };
 		471F6F8B29483F96008E6C6E /* CardListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
-		47227AF229499B2E00D3C6CE /* WebserviceConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceConfig.swift; sourceTree = "<group>"; };
-		47227AF329499B2E00D3C6CE /* WebserviceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceConstants.swift; sourceTree = "<group>"; };
-		47227AF429499B2E00D3C6CE /* WebserviceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceHelper.swift; sourceTree = "<group>"; };
 		47227AFA2949A37000D3C6CE /* UserModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModule.swift; sourceTree = "<group>"; };
 		47227AFD2949A37000D3C6CE /* ILoginRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILoginRepository.swift; sourceTree = "<group>"; };
 		47227AFE2949A37000D3C6CE /* LoginRepositoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -124,11 +127,22 @@
 		4769F18C2949A6140067E469 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		4769F18E2949A6D20067E469 /* AppContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		4769F1912949EE8E0067E469 /* UserModuleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModuleConstants.swift; sourceTree = "<group>"; };
+		4770E7632953893C009A2C13 /* LoginRepositoryImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryImplTests.swift; sourceTree = "<group>"; };
+		4770E76529538C19009A2C13 /* LoginUseCaseImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseImplTest.swift; sourceTree = "<group>"; };
+		4770E76829539295009A2C13 /* URLRequestGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestGeneratorTests.swift; sourceTree = "<group>"; };
+		4770E76929539295009A2C13 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		4770E76A29539295009A2C13 /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		4770E76B29539295009A2C13 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		4770E770295393A6009A2C13 /* User.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
 		47A09201294A0522006AE406 /* UserViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModelTest.swift; sourceTree = "<group>"; };
-		47A09204294A0522006AE406 /* MockUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUseCase.swift; sourceTree = "<group>"; };
 		47A09209294A070D006AE406 /* CardListViewModelImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewModelImplTests.swift; sourceTree = "<group>"; };
 		47A0920A294A070D006AE406 /* CardListRepositoryImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListRepositoryImplTests.swift; sourceTree = "<group>"; };
 		47A0920C294A070D006AE406 /* CardListUseCaseImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListUseCaseImplTests.swift; sourceTree = "<group>"; };
+		47D4D9B329531F0800766155 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		47D4D9B429531F0800766155 /* URLRequestGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestGenerator.swift; sourceTree = "<group>"; };
+		47D4D9B529531F0800766155 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		47D4D9B629531F0800766155 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		47D4D9BB295321BF00766155 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		4EED7042888B12B636CEE5A3 /* Pods-CreditCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCard.debug.xcconfig"; path = "Target Support Files/Pods-CreditCard/Pods-CreditCard.debug.xcconfig"; sourceTree = "<group>"; };
 		8BABD179F03B1E66A6AC2787 /* Pods-CreditCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCard.release.xcconfig"; path = "Target Support Files/Pods-CreditCard/Pods-CreditCard.release.xcconfig"; sourceTree = "<group>"; };
 		A6EC6E956EE678317BFF61F7 /* Pods_CreditCardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreditCardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,12 +229,13 @@
 		471F6F4129483D5F008E6C6E /* CreditCard */ = {
 			isa = PBXGroup;
 			children = (
+				47D4D9BB295321BF00766155 /* Configuration.swift */,
+				47D4D9B229531F0800766155 /* Networking */,
 				4769F18E2949A6D20067E469 /* AppContainer.swift */,
 				4769F18C2949A6140067E469 /* Alertable.swift */,
 				47227B122949A37000D3C6CE /* Assets.xcassets */,
 				47227B152949A37000D3C6CE /* Main.storyboard */,
 				47227AF92949A37000D3C6CE /* UserModule */,
-				47227AE22948A4E700D3C6CE /* Network */,
 				471F6F7229483F96008E6C6E /* CardList */,
 				471F6F4229483D5F008E6C6E /* AppDelegate.swift */,
 				471F6F4429483D5F008E6C6E /* SceneDelegate.swift */,
@@ -234,6 +249,7 @@
 		471F6F5829483D63008E6C6E /* CreditCardTests */ = {
 			isa = PBXGroup;
 			children = (
+				4770E76729539295009A2C13 /* Networking */,
 				47A09208294A070D006AE406 /* ListModule */,
 				47A09200294A0522006AE406 /* UserModule */,
 				471F6F5929483D63008E6C6E /* CreditCardTests.swift */,
@@ -338,7 +354,6 @@
 			children = (
 				471F6F8529483F96008E6C6E /* CardListViewModel.swift */,
 				471F6F8629483F96008E6C6E /* CardListViewModelImpl.swift */,
-				471F6F8729483F96008E6C6E /* CardListViewModelOutput.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -357,24 +372,6 @@
 				471F6F8B29483F96008E6C6E /* CardListView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		47227AE22948A4E700D3C6CE /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				47227AF129499B2E00D3C6CE /* WebserviceEngine */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		47227AF129499B2E00D3C6CE /* WebserviceEngine */ = {
-			isa = PBXGroup;
-			children = (
-				47227AF229499B2E00D3C6CE /* WebserviceConfig.swift */,
-				47227AF329499B2E00D3C6CE /* WebserviceConstants.swift */,
-				47227AF429499B2E00D3C6CE /* WebserviceHelper.swift */,
-			);
-			path = WebserviceEngine;
 			sourceTree = "<group>";
 		};
 		47227AF92949A37000D3C6CE /* UserModule */ = {
@@ -455,9 +452,9 @@
 		47227B092949A37000D3C6CE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				47227B0C2949A37000D3C6CE /* ILoginViewModel.swift */,
 				47227B0A2949A37000D3C6CE /* LoginViewModelImpl.swift */,
 				47227B0B2949A37000D3C6CE /* LoginViewModelOutput.swift */,
-				47227B0C2949A37000D3C6CE /* ILoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -478,29 +475,26 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		4770E76729539295009A2C13 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4770E770295393A6009A2C13 /* User.json */,
+				4770E76829539295009A2C13 /* URLRequestGeneratorTests.swift */,
+				4770E76929539295009A2C13 /* NetworkManagerTests.swift */,
+				4770E76A29539295009A2C13 /* MockURLSession.swift */,
+				4770E76B29539295009A2C13 /* MockURLSessionDataTask.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		47A09200294A0522006AE406 /* UserModule */ = {
 			isa = PBXGroup;
 			children = (
 				47A09201294A0522006AE406 /* UserViewModelTest.swift */,
-				47A09202294A0522006AE406 /* Mock */,
+				4770E7632953893C009A2C13 /* LoginRepositoryImplTests.swift */,
+				4770E76529538C19009A2C13 /* LoginUseCaseImplTest.swift */,
 			);
 			path = UserModule;
-			sourceTree = "<group>";
-		};
-		47A09202294A0522006AE406 /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				47A09203294A0522006AE406 /* MockUseCase */,
-			);
-			path = Mock;
-			sourceTree = "<group>";
-		};
-		47A09203294A0522006AE406 /* MockUseCase */ = {
-			isa = PBXGroup;
-			children = (
-				47A09204294A0522006AE406 /* MockUseCase.swift */,
-			);
-			path = MockUseCase;
 			sourceTree = "<group>";
 		};
 		47A09208294A070D006AE406 /* ListModule */ = {
@@ -511,6 +505,17 @@
 				47A0920C294A070D006AE406 /* CardListUseCaseImplTests.swift */,
 			);
 			path = ListModule;
+			sourceTree = "<group>";
+		};
+		47D4D9B229531F0800766155 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				47D4D9B329531F0800766155 /* NetworkManager.swift */,
+				47D4D9B429531F0800766155 /* URLRequestGenerator.swift */,
+				47D4D9B529531F0800766155 /* NetworkRequest.swift */,
+				47D4D9B629531F0800766155 /* NetworkError.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -633,6 +638,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4770E771295393A6009A2C13 /* User.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,25 +762,25 @@
 				471F6F9629483F96008E6C6E /* CardListViewModelImpl.swift in Sources */,
 				47227B1D2949A37000D3C6CE /* LoginUseCaseImpl.swift in Sources */,
 				47227B192949A37000D3C6CE /* ILoginService.swift in Sources */,
-				47A09207294A0556006AE406 /* MockUseCase.swift in Sources */,
-				47227AF729499B2E00D3C6CE /* WebserviceHelper.swift in Sources */,
-				471F6F9729483F96008E6C6E /* CardListViewModelOutput.swift in Sources */,
 				471F6F9529483F96008E6C6E /* CardListViewModel.swift in Sources */,
 				47227B1A2949A37000D3C6CE /* LoginServiceImpl.swift in Sources */,
 				47227B202949A37000D3C6CE /* ILoginViewModel.swift in Sources */,
+				47D4D9BA29531F0800766155 /* NetworkError.swift in Sources */,
 				47227B232949A37000D3C6CE /* LoginView.swift in Sources */,
 				47227B172949A37000D3C6CE /* ILoginRepository.swift in Sources */,
 				471F6F9329483F96008E6C6E /* CardListUseCase.swift in Sources */,
 				471F6F9429483F96008E6C6E /* CardListUseCaseImpl.swift in Sources */,
-				47227AF529499B2E00D3C6CE /* WebserviceConfig.swift in Sources */,
+				47D4D9B929531F0800766155 /* NetworkRequest.swift in Sources */,
 				471F6F8D29483F96008E6C6E /* CardListRepositoryImpl.swift in Sources */,
 				471F6F4729483D5F008E6C6E /* ViewController.swift in Sources */,
 				471F6F4329483D5F008E6C6E /* AppDelegate.swift in Sources */,
 				4769F18D2949A6140067E469 /* Alertable.swift in Sources */,
 				471F6F4529483D5F008E6C6E /* SceneDelegate.swift in Sources */,
-				47227AF629499B2E00D3C6CE /* WebserviceConstants.swift in Sources */,
+				47D4D9B729531F0800766155 /* NetworkManager.swift in Sources */,
 				4769F1922949EE8E0067E469 /* UserModuleConstants.swift in Sources */,
 				471F6F8F29483F96008E6C6E /* Constants.swift in Sources */,
+				47D4D9BC295321BF00766155 /* Configuration.swift in Sources */,
+				47D4D9B829531F0800766155 /* URLRequestGenerator.swift in Sources */,
 				47227B1C2949A37000D3C6CE /* ILoginUseCase.swift in Sources */,
 				47227B222949A37000D3C6CE /* LoginViewController.swift in Sources */,
 				4769F18F2949A6D20067E469 /* AppContainer.swift in Sources */,
@@ -796,11 +802,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4770E76D29539295009A2C13 /* NetworkManagerTests.swift in Sources */,
+				4770E76629538C19009A2C13 /* LoginUseCaseImplTest.swift in Sources */,
 				471F6F5A29483D63008E6C6E /* CreditCardTests.swift in Sources */,
 				47A0920F294A070D006AE406 /* CardListRepositoryImplTests.swift in Sources */,
 				47A09211294A070D006AE406 /* CardListUseCaseImplTests.swift in Sources */,
+				4770E76F29539295009A2C13 /* MockURLSessionDataTask.swift in Sources */,
 				47A09205294A0522006AE406 /* UserViewModelTest.swift in Sources */,
 				47A0920E294A070D006AE406 /* CardListViewModelImplTests.swift in Sources */,
+				4770E7642953893C009A2C13 /* LoginRepositoryImplTests.swift in Sources */,
+				4770E76E29539295009A2C13 /* MockURLSession.swift in Sources */,
+				4770E76C29539295009A2C13 /* URLRequestGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
