@@ -1,13 +1,10 @@
 //
 //  LoginRepositoryImplTests.swift
-//  CreditCardTests
 //
-//  Created by Aditi Jain 3 on 22/12/22.
-//
+
 import Foundation
 import XCTest
 @testable import CreditCard
-
 
 class LoginRepositoryImplTests: XCTestCase {
     
@@ -28,20 +25,20 @@ class LoginRepositoryImplTests: XCTestCase {
 
     func testFetchProducts_Successs() throws {
         loginService.mockLogin = Result.success(MockUserList().user())
-        loginRepositoryImpl.makeServiceCallToLoginUser(email: "", password: "", completion:  { result in
+        loginRepositoryImpl.makeServiceCallToLoginUser(email: "", password: "", completion: { result in
             switch result {
             case .success(let user):
                 XCTAssertTrue(user.count > 0)
-            case .failure(_):
+            case .failure:
                 XCTFail("makeServiceCallToGetProducts should not fail")
             }
         })
     }
     
     func testFetchProducts_Failure() throws {
-        loginRepositoryImpl.makeServiceCallToLoginUser(email: "", password: "", completion:  { result in
+        loginRepositoryImpl.makeServiceCallToLoginUser(email: "", password: "", completion: { result in
             switch result {
-            case .success(_):
+            case .success:
                 XCTFail("makeServiceCallToGetProducts should be fail")
             case .failure(let error):
                 XCTAssertNotNil(error)
@@ -68,4 +65,3 @@ class MockUserList {
        return [user]
     }
 }
-

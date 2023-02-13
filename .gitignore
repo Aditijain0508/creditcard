@@ -30,3 +30,4 @@ Main.xcworkspace/xcshareddata/
 .classpath
 .project
 org.eclipse.buildship.core.prefs
+*.rtf

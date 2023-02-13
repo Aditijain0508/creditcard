@@ -3,4 +3,337 @@
    uuid = "CC563C1B-23AB-40DB-B460-A6E844C2D9F2"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "45996BE6-4914-40C4-A772-B9EEE7AC1D9A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreditCard/UserModule/Data/Services/LoginServiceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "makeNetworkRequest(email:password:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8235D720-C060-4B3F-87F6-846F93462A6D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreditCard/CardList/Data/Repository/CardListRepositoryImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "makeServiceCallToGetProducts(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B38F1FB-4E71-46F5-88FE-A38400F3385F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreditCard/CardList/Data/Services/CardListServiceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "makeNetworkRequest(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4CB96E5-26E3-4866-8FDF-8CF6ABFD7C1C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreditCard/Networking/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "request(request:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED962EB4-805C-426A-AB1F-F82816BE2A99"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreditCardTests/Networking/NetworkManagerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "testRequestFailureCase()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ED962EB4-805C-426A-AB1F-F82816BE2A99 - 9a197243703771c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;CreditCard.AuthUser&gt;, Swift.Error&gt;) -&gt; () in CreditCardTests.NetworkManagerTests.testRequestFailureCase() -&gt; ()"
+                  moduleName = "CreditCardTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adijain0/Desktop/creditcard/CC/CreditCardTests/Networking/NetworkManagerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "187">
+               </Location>
+               <Location
+                  uuid = "ED962EB4-805C-426A-AB1F-F82816BE2A99 - 9ab92e16daf8ce9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreditCardTests.NetworkManagerTests.testRequestFailureCase() -&gt; ()"
+                  moduleName = "CreditCardTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adijain0/Desktop/creditcard/CC/CreditCardTests/Networking/NetworkManagerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "ED962EB4-805C-426A-AB1F-F82816BE2A99 - 9ab92e16daf8d2f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreditCardTests.NetworkManagerTests.testRequestFailureCase() -&gt; ()"
+                  moduleName = "CreditCardTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adijain0/Desktop/creditcard/CC/CreditCardTests/Networking/NetworkManagerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "ED962EB4-805C-426A-AB1F-F82816BE2A99 - 9ab92e16daf8a75"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreditCardTests.NetworkManagerTests.testRequestFailureCase() -&gt; ()"
+                  moduleName = "CreditCardTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adijain0/Desktop/creditcard/CC/CreditCardTests/Networking/NetworkManagerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "ED962EB4-805C-426A-AB1F-F82816BE2A99 - 9ab92e16daf8a16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreditCardTests.NetworkManagerTests.testRequestFailureCase() -&gt; ()"
+                  moduleName = "CreditCardTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adijain0/Desktop/creditcard/CC/CreditCardTests/Networking/NetworkManagerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "90">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "723DEC7D-CA91-428C-9F12-F669FBBAC528"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreditCard/Networking/URLRequestGenerator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "createURLRequest(using:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "723DEC7D-CA91-428C-9F12-F669FBBAC528 - fe3f26dcf99282a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreditCard.URLRequestGenerator.createURLRequest(using: CreditCard.INetworkRequest) throws -&gt; Foundation.URLRequest"
+                  moduleName = "CreditCard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adijain0/Desktop/creditcard/CC/CreditCard/Networking/URLRequestGenerator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "2008">
+               </Location>
+               <Location
+                  uuid = "723DEC7D-CA91-428C-9F12-F669FBBAC528 - fe3f26dcf99282a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreditCard.URLRequestGenerator.createURLRequest(using: CreditCard.INetworkRequest) throws -&gt; Foundation.URLRequest"
+                  moduleName = "CreditCard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adijain0/Desktop/creditcard/CC/CreditCard/Networking/URLRequestGenerator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "2032">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47FFB93D-2EC7-4DEE-8A91-5671A99ACA0F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreditCard/Networking/URLRequestGenerator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "createURLRequest(using:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C1635FB-5A08-423E-A4C0-EBC0DA7DD594"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreditCard/Networking/URLRequestGenerator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "createURLRequest(using:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3785F104-EB47-44B6-849F-F8EA1B9FE262"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreditCard/Networking/URLRequestGenerator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "createURLRequest(using:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CBA93CDB-75ED-4FE0-9993-ADE5204F2616"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreditCardTests/Networking/URLRequestGeneratorTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "testURLRequestNil()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CBA93CDB-75ED-4FE0-9993-ADE5204F2616 - 3c5ef96b860547b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreditCardTests.URLRequestGeneratorTests.testURLRequestNil() -&gt; ()"
+                  moduleName = "CreditCardTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adijain0/Desktop/creditcard/CC/CreditCardTests/Networking/URLRequestGeneratorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "573">
+               </Location>
+               <Location
+                  uuid = "CBA93CDB-75ED-4FE0-9993-ADE5204F2616 - 3c5ef96b860547b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreditCardTests.URLRequestGeneratorTests.testURLRequestNil() -&gt; ()"
+                  moduleName = "CreditCardTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adijain0/Desktop/creditcard/CC/CreditCardTests/Networking/URLRequestGeneratorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "541">
+               </Location>
+               <Location
+                  uuid = "CBA93CDB-75ED-4FE0-9993-ADE5204F2616 - 3c5ef96b860547ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreditCardTests.URLRequestGeneratorTests.testURLRequestNil() -&gt; ()"
+                  moduleName = "CreditCardTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adijain0/Desktop/creditcard/CC/CreditCardTests/Networking/URLRequestGeneratorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "671">
+               </Location>
+               <Location
+                  uuid = "CBA93CDB-75ED-4FE0-9993-ADE5204F2616 - 3c5ef96b860547ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CreditCardTests.URLRequestGeneratorTests.testURLRequestNil() -&gt; ()"
+                  moduleName = "CreditCardTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adijain0/Desktop/creditcard/CC/CreditCardTests/Networking/URLRequestGeneratorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "656">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

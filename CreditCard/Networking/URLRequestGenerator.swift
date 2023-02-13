@@ -1,8 +1,5 @@
 //
 //  URLRequestGenerator.swift
-//  TestDemo
-//
-//  Created by   on 17/08/22.
 //
 
 import Foundation
@@ -38,7 +35,7 @@ class URLRequestGenerator: IURLRequestGenerator {
         }
     }
     
-    private func createURL(with endPoint: INetworkRequest)throws -> URL{
+    private func createURL(with endPoint: INetworkRequest)throws -> URL {
         guard let url =  URL(string: (endPoint.baseUrl+endPoint.path)) else {
             throw NSError(domain: "URL", code: NSURLErrorBadURL, userInfo: nil)
         }

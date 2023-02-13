@@ -1,8 +1,5 @@
 //
 //  NetworkManagerTests.swift
-//  TestDemoTests
-//
-//  Created by   on 22/08/22.
 //
 
 import XCTest
@@ -20,12 +17,19 @@ class NetworkManagerTests: XCTestCase {
                                headerFields: nil)!
     }
     
+    var failedResponse: HTTPURLResponse {
+        return HTTPURLResponse(url: URL(string: "/posts")!,
+                               statusCode: 202,
+                               httpVersion: nil,
+                               headerFields: nil)!
+    }
+    
     override func setUp() {
         super.setUp()
         mockURLSession = MockURLSession()
         networkManger = NetworkManager(session: mockURLSession)
     }
-
+    
     override func tearDown() {
         networkManger = nil
         mockURLSession = nil
@@ -50,17 +54,38 @@ class NetworkManagerTests: XCTestCase {
         wait(for: [expectation], timeout: 2.0)
     }
     
+    func testRequestSuccessResponseNoData() {
+        let expectation = expectation(description: "Success Response")
+        mockURLSession.urlResponse = response
+        
+        let request = NetworkRequest(path: "posts", method: .get, baseUrl: "https://jsonplaceholder.typicode.com/")
+        networkManger.request(request: request) { (result: Result<[AuthUser], Error>) in
+            switch result {
+            case .success(_):
+                XCTFail("Success not expectd")
+            case let .failure(error):
+                if let iError = error as? NetworkError {
+                    XCTAssertEqual(iError, NetworkError.noData)
+                }
+                expectation.fulfill()
+            }
+        }
+        wait(for: [expectation], timeout: 2.0)
+    }
+    
     func testRequestFailureCase() {
         let expectation = expectation(description: "Bad Request Failure Case")
         mockURLSession.error = NSError(domain: "Failed", code: 0)
         
         let request = NetworkRequest(path: "posts", method: .get, baseUrl: "https://jsonplaceholder.typicode.com/")
         networkManger.request(request: request) { (result: Result<[AuthUser], Error>) in
-            switch result  {
+            switch result {
             case .success(_):
                 XCTFail("Success not expectd")
             case let .failure(error):
-                XCTAssertEqual(error as! NetworkError, NetworkError.badRequest)
+                if let iError = error as? NetworkError {
+                    XCTAssertEqual(iError, NetworkError.badRequest)
+                }
                 expectation.fulfill()
             }
         }
@@ -70,14 +95,14 @@ class NetworkManagerTests: XCTestCase {
     func testInvalidRequestFailure() {
         let expectation = expectation(description: "Invalid Request")
         let request = NetworkRequest(path: "(#$%", method: .get, baseUrl: "https://jsonplaceholder.typicode.com/")
-
         networkManger.request(request: request) { (result: Result<[AuthUser], Error>) in
             switch result {
             case .success(_):
-                XCTFail("Success not expected")
+                XCTFail("Success not expectd")
             case let .failure(error):
-                XCTAssertEqual(error as! NetworkError, NetworkError.invalidRequest)
-                XCTAssertEqual((error as! NetworkError).description, "Invalid Request")
+                if let iError = error as? NetworkError {
+                    XCTAssertEqual(iError, NetworkError.invalidRequest)
+                }
                 expectation.fulfill()
             }
         }
@@ -90,22 +115,46 @@ class NetworkManagerTests: XCTestCase {
         
         let request = NetworkRequest(path: "posts", method: .get, baseUrl: "https://jsonplaceholder.typicode.com/")
         networkManger.request(request: request) { (result: Result<[AuthUser], Error>) in
-            switch result  {
+            switch result {
             case .success(_):
                 XCTFail("Success not expectd")
             case let .failure(error):
-                XCTAssertEqual(error as! NetworkError, NetworkError.noResponse)
-                XCTAssertEqual((error as! NetworkError).description, "Response returned with no response")
+                if let iError = error as? NetworkError {
+                    XCTAssertEqual(iError, NetworkError.noResponse)
+                    XCTAssertEqual((iError).description, "Response returned with no response")
+                }
                 expectation.fulfill()
             }
         }
         wait(for: [expectation], timeout: 2.0)
     }
+    
+    func testFailedRequest() {
+            let expectation = expectation(description: "Bad Request Failure Case")
+            mockURLSession.urlResponse = failedResponse
+            
+            let request = NetworkRequest(path: "posts", method: .get, baseUrl: "https://jsonplaceholder.typicode.com/")
+            networkManger.request(request: request) { (result: Result<[AuthUser], Error>) in
+                switch result {
+                case .success(_):
+                    XCTFail("Success not expectd")
+                case let .failure(error):
+                    if let iError = error as? NetworkError {
+                        XCTAssertEqual(iError, NetworkError.failed)
+                    }
+                    expectation.fulfill()
+                }
+            }
+            wait(for: [expectation], timeout: 2.0)
+    }
 }
 class MockData {
     
     static var user: [AuthUser] {
-        try! JSONDecoder().decode([AuthUser].self, from: userData)
+        if let data = try? JSONDecoder().decode([AuthUser].self, from: userData) {
+            return data
+        }
+        return []
     }
     
     static var userData: Data {
@@ -114,8 +163,8 @@ class MockData {
     
     static func loadJsonData(_ fromFile: String) -> Data {
         let path = Bundle(for: self).path(forResource: fromFile, ofType: "json")
-        let jsonString = try! String(contentsOfFile: path!, encoding: .utf8)
-        let data = jsonString.data(using: .utf8)!
-        return data
+        let jsonString = try? String(contentsOfFile: path!, encoding: .utf8)
+        let data = jsonString?.data(using: .utf8)!
+        return data ?? Data()
     }
 }

@@ -1,8 +1,6 @@
 //
 //  CardListViewModelImplTests.swift
-//  CardTests
 //
-
 
 import Foundation
 import XCTest
@@ -16,7 +14,6 @@ class CardListViewModelImplTests: XCTestCase {
     var cardListViewModel: CardListViewModelImpl!
     var cardListUseCase: MockCardListUseCase!
     private var promise: XCTestExpectation!
-
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -47,7 +44,6 @@ class CardListViewModelImplTests: XCTestCase {
     }
     
 }
-
 
 class MockCardListUseCase: CardListUseCase {
     var mockGetProducts: Result<CardsList, Error>?

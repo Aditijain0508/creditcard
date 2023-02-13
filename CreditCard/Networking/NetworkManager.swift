@@ -1,8 +1,5 @@
 //
 //  NetworkManager.swift
-//  TestDemo
-//
-//  Created by   on 14/08/22.
 //
 
 import Foundation
@@ -17,6 +14,11 @@ class NetworkManager: INetworkManager {
     
     private let session: URLSession
     private let requestGenerator: IURLRequestGenerator
+    
+    static let initObject: INetworkManager = {
+            let networkManager = NetworkManager()
+            return networkManager
+        }()
     
     init(session: URLSession, requestGenerator: IURLRequestGenerator) {
         self.session = session
@@ -35,7 +37,7 @@ class NetworkManager: INetworkManager {
 
         let task = session.dataTask(with: urlRequest) { data, response, error in
 
-            if let _ = error {
+            if error != nil {
                 return completion(.failure(NetworkError.badRequest))
             }
             
@@ -53,19 +55,7 @@ class NetworkManager: INetworkManager {
             do {
                 let decodedData = try JSONDecoder().decode(T.self, from: data)
                 completion(.success(decodedData))
-            } catch let DecodingError.dataCorrupted(context) {
-                print(context)
-            } catch let DecodingError.keyNotFound(key, context) {
-                print("Key '\(key)' not found:", context.debugDescription)
-                print("codingPath:", context.codingPath)
-            } catch let DecodingError.valueNotFound(value, context) {
-                print("Value '\(value)' not found:", context.debugDescription)
-                print("codingPath:", context.codingPath)
-            } catch let DecodingError.typeMismatch(type, context)  {
-                print("Type '\(type)' mismatch:", context.debugDescription)
-                print("codingPath:", context.codingPath)
             } catch {
-                print("error: ", error)
             }
         }
         task.resume()

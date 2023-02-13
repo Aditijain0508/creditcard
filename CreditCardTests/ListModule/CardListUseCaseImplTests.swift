@@ -1,13 +1,10 @@
 //
 //  CardListUseCaseImplTests.swift
-//  CardTests
 //
-
 
 import Foundation
 import XCTest
 @testable import CreditCard
-
 
 class CardListUseCaseImplTests: XCTestCase {
     

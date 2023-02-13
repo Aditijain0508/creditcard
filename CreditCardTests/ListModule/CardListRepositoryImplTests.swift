@@ -1,12 +1,10 @@
 //
 //  CardListRepositoryImplTests.swift
-//  CardTests
 //
 
 import Foundation
 import XCTest
 @testable import CreditCard
-
 
 class CardListRepositoryImplTests: XCTestCase {
     
@@ -31,7 +29,7 @@ class CardListRepositoryImplTests: XCTestCase {
             switch result {
             case .success(let cardList):
                 XCTAssertTrue(cardList.cards?.count ?? 0 > 0)
-            case .failure(_):
+            case .failure:
                 XCTFail("makeServiceCallToGetProducts should not fail")
             }
         }
@@ -40,7 +38,7 @@ class CardListRepositoryImplTests: XCTestCase {
     func testFetchProducts_Failure() throws {
         cardListRepositoryImpl.makeServiceCallToGetProducts { result in
             switch result {
-            case .success(_):
+            case .success:
                 XCTFail("makeServiceCallToGetProducts should be fail")
             case .failure(let error):
                 XCTAssertNotNil(error)
@@ -55,4 +53,3 @@ class MockCardListService: CardListService {
         completion(mockGetProducts ?? .failure(CardListViewModelError.emptyArray))
     }
 }
-

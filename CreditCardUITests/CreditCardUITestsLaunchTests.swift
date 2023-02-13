@@ -1,8 +1,5 @@
 //
 //  CreditCardUITestsLaunchTests.swift
-//  CreditCardUITests
-//
-//  Created by Aditi Jain 3 on 13/12/22.
 //
 
 import XCTest

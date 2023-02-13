@@ -1,8 +1,5 @@
 //
 //  MockURLSessionDataTask.swift
-//  TestDemoTests
-//
-//  Created by   on 19/08/22.
 //
 
 import Foundation

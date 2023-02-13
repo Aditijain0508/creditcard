@@ -1,8 +1,5 @@
 //
 //  NetworkRequest.swift
-//  TestDemo
-//
-//  Created by   on 17/08/22.
 //
 
 import Foundation

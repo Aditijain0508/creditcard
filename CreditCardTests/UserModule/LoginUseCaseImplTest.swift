@@ -1,14 +1,10 @@
 //
 //  LoginUseCaseImplTest.swift
-//  CreditCardTests
-//
-//  Created by Aditi Jain 3 on 22/12/22.
 //
 
 import Foundation
 import XCTest
 @testable import CreditCard
-
 
 class LoginUseCaseImplTest: XCTestCase {
     
@@ -29,20 +25,20 @@ class LoginUseCaseImplTest: XCTestCase {
 
     func testFetchProducts_Successs() throws {
         loginRepository.mockLogin = Result.success(MockUserList().user())
-        loginUseCaseImpl.getLogin(email: "", password: "", completion:  { result in
+        loginUseCaseImpl.getLogin(email: "", password: "", completion: { result in
             switch result {
             case .success(let user):
                 XCTAssertTrue(user.count > 0)
-            case .failure(_):
+            case .failure:
                 XCTFail("getProducts should not fail")
             }
         })
     }
     
     func testFetchProducts_Failure() throws {
-        loginUseCaseImpl.getLogin(email: "", password: "", completion:  { result in
+        loginUseCaseImpl.getLogin(email: "", password: "", completion: { result in
             switch result {
-            case .success(_):
+            case .success:
                 XCTFail("getProducts should be fail")
             case .failure(let error):
                 XCTAssertNotNil(error)
@@ -58,4 +54,3 @@ class MockLoginRepository: ILoginRepository {
     
     var mockLogin: Result<[AuthUser], Error>?
 }
-
